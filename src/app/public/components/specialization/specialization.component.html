@@ -1,0 +1,26 @@
+<div class="main-container">
+  <img [src]="mainImage" alt="" />
+  <div class="title">{{ mainTitle }}</div>
+  <div class="description">
+    {{mainDescription}}
+  </div>
+  <div class="project-images">
+    <div *ngFor="let data of products">
+      <div class="one-project">
+        <img src="{{ data.image }}" alt="project1" />
+        <div class="project-info">
+          <div class="inner-title">
+            {{ data.title }}
+          </div>
+          <div class="inner-description">
+            {{ data.description }}
+          </div>
+          <div class="row">
+            <button class="learn-more">Learn More</button>
+            <button class="quote">Request a quote</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

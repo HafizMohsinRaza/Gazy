@@ -1,0 +1,35 @@
+<!-- centered-container.component.html -->
+<div class="overlay" *ngIf="showContainer">
+    <div class="centered-content">
+      <div class="header">
+        <h3>Contact Us</h3>
+        <i class="icon fa-solid fa-xmark" (click)="hideContainer()"></i>
+      </div>
+      <div class="divider"></div>
+      <div class="body-container">
+        <div class="left-column">
+            <img src="assets/images/contact.png" alt="">
+        </div>
+        <div class="right-column">
+            <ng-container *ngFor="let detail of details">
+                <div class="content">
+                    <div class="first-row">
+                        <i [class]="detail.icon"></i>
+                        {{detail.title}}
+                    </div>
+                    <div class="inner-divider"></div>
+                    <div class="second-row">
+                        {{detail.description}}
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <div class="bottom">
+        <button (click)="hideContainer()">Close</button>
+      </div>
+    </div>
+  </div>
+  
+  

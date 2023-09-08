@@ -1,0 +1,49 @@
+<!-- centered-container.component.html -->
+<div class="overlay">
+  <div class="centered-content">
+    <div class="body-container">
+      <div class="left-column">
+        <img src="assets/images/contact.png" alt="" />
+      </div>
+      <div class="right-column">
+        <ng-container *ngFor="let detail of details">
+          <div class="content">
+            <div class="first-row">
+              <i [class]="detail.icon"></i>
+              {{ detail.title }}
+            </div>
+            <div class="inner-divider"></div>
+            <div class="second-row">
+              {{ detail.description }}
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+  <div class="centered-content">
+    <div class="map">
+      <img src="assets/images/map-icon.png" alt="" />
+      <div class="map-title">Find Us On Map</div>
+      <google-map
+        class="google-map"
+        height="400px"
+        width="750px"
+        [center]="center"
+        [zoom]="zoom"
+      >
+        <!-- <map-heatmap-layer
+          [data]="heatmapData"
+          [options]="heatmapOptions"
+        ></map-heatmap-layer> -->
+        <map-marker [position]="heatmapData[0]" [title]="'Gaztron'"></map-marker>
+      </google-map>
+    </div>
+  </div>
+  <div class="centered-content">
+    <app-key-products></app-key-products>
+  </div>
+  <div class="centered-content">
+    <app-quote [options]="options"></app-quote>
+  </div>
+</div>

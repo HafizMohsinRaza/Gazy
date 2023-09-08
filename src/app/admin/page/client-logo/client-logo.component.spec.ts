@@ -1,0 +1,21 @@
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { ClientLogoComponent } from './client-logo.component';
+
+describe('ClientLogoComponent', () => {
+  let component: ClientLogoComponent;
+  let fixture: ComponentFixture<ClientLogoComponent>;
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      declarations: [ClientLogoComponent]
+    });
+    fixture = TestBed.createComponent(ClientLogoComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

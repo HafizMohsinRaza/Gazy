@@ -1,0 +1,15 @@
+<div class="slider-image-container">
+  <img src="assets/images/p8.png" alt="About" class="slider-img-responsive" />
+  <div class="slider-title">Trusted By Brands Across The Globe</div>
+<div class="slider-card">
+  <p-carousel [value]="brands" [numVisible]="6" [numScroll]="6" [circular]="true" [responsiveOptions]="responsiveOptions">
+    <ng-template let-brand pTemplate="item">
+      <div class="border-1 surface-border border-round m-2 text-center py-5 px-3">
+        <div class="mb-3 slider-border-img">
+          <img [src]="brand.image" [alt]="" class="w-6 shadow-2 " />
+        </div>
+      </div>
+    </ng-template>
+  </p-carousel>
+</div>
+

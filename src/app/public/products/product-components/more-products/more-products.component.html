@@ -1,0 +1,18 @@
+<div class="main-container">
+    <img
+      src="assets/images/more-products.png"
+      alt="More Products"
+      class="custom-image"
+    />
+    <div class="project-title">Explore More Products</div>
+
+    <div class="project-images">
+      <div *ngFor="let data of projects">
+        <div class="one-project">
+            <img src="{{ data.images }}" alt="product" />
+            <div class="project-info">{{ data.title }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

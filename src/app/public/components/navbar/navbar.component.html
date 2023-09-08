@@ -1,0 +1,229 @@
+<div class="main">
+  <div class="contact-bar">
+    <div class="contact-info">
+      <!-- <i class="fa fa-mobile"></i> -->
+      <i class="fa-solid fa-mobile-screen" style="color: white;"></i>
+      <a href="#"> +91-8447203393 </a>
+
+    </div>
+
+    <a (click)="showCenteredContainer()"> Get in touch with us. 🎉 </a>
+    <div class="contact-info">
+      <i class="fa-solid fa-envelope"></i>
+      <a href="mailto:info@gaztron.in"> info@gaztron.in </a>
+    </div>
+  </div>
+  <nav class="navbar navbar-expand-xl navbar-light">
+    <div class="container-fluid">
+      <div class="logo">
+        <div class="address">
+          <i class="fa-solid fa-bars left-menu" (click)="toggleMenu()"></i>
+          <app-sidenav
+            [isOpen]="menuOpen"
+            (closeMenu)="closeMenu()"
+          ></app-sidenav>
+        </div>
+
+        <img
+          src="assets/images/Group 5.svg"
+          alt="Logo"
+          [routerLink]="['']"
+          routerLinkActive="router-link-active"
+        />
+      </div>
+      <button
+      *ngIf="show_cross_icon"
+        class="navbar-toggler"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        [class.menu_icon_Class]="show_cross_icon"
+        (click)="openMenu()"
+      >
+        <span></span>
+        <span class="menu-text">MENU</span>
+        <span></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav custom me-auto mb-2 mb-lg-0">
+          <li class="nav-item" routerLinkActive="active">
+            <a class="nav-link active" aria-current="page" routerLink=""
+              >Home</a
+            >
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle active"
+              [routerLink]="['/about']"
+              routerLinkActive="router-link-active"
+              id="navbarDropdown"
+              role="button"
+            >
+              About
+            </a>
+
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" routerLink="certification">Our Cerificates</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item" routerLink="ourproject">Our Projects</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item" routerLink="blogs">Blogs</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown hoverable">
+            <a
+              class="nav-link dropdown-toggle active"
+              id="navbarDropdown"
+              role="button"
+              aria-expanded="false"
+              routerLink="nav-nitrogen"
+            >
+              Nitrogen Plant
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li>
+                <a class="dropdown-item" routerLink="nitrogen-cudx"
+                  >Nitrogen Gas Generator (CU-DX Model)</a
+                >
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a class="dropdown-item" routerLink="nitrogen-dx"
+                  >Nitrogen Gas Generator (DX Model)</a
+                >
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a class="dropdown-item" routerLink="nitrogen-inertization"
+                  >Nitrogen Inertization for Coal & Cement Mill</a
+                >
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a class="dropdown-item" routerLink="nitrogen-blanketing"
+                  >Nitrogen Blanketing For Storage Tanks</a
+                >
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a class="dropdown-item" routerLink="nitrogen-food"
+                  >Nitrogen for Food Packaging Industry</a
+                >
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a class="dropdown-item" routerLink="nitrogen-ms"
+                  >PSA Nitrogen Gas Generator</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle active"
+              routerLink="nav-oxygen"
+              id="navbarDropdown"
+              role="button"
+              aria-expanded="false"
+            >
+              Oxygen Plant
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li>
+                <a class="dropdown-item" routerLink="gox-m"
+                  >PSA Oxygen Gas Generator Plant For Medical Purposes</a
+                >
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a class="dropdown-item" routerLink="gox-i"
+                  >PSA Oxygen Gas Generator Plant For Industrial Purposes</a
+                >
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a class="dropdown-item" routerLink="oxygen10-20NM3"
+                  >PSA Oxygen Gas Generator Plant (10-20NM3)</a
+                >
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a class="dropdown-item" routerLink="oxygen30-60NM3">PSA Oxygen Gas Generator Plant (30-60NM3)</a>
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a class="dropdown-item" routerLink="vpsa"
+                  >VPSA Oxygen Gas Generator Plant</a
+                >
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a class="dropdown-item" routerLink="gox-c"
+                  >Oxygen Cylinder Filling Station</a
+                >
+              </li>
+
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle active"
+              routerLink="nav-hydrogen"
+              id="navbarDropdown"
+              role="button"
+              aria-expanded="false"
+            >
+              Hydrogen Plant
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li>
+                <a class="dropdown-item" routerLink="ammonia-cracker"
+                  >Ammonia Cracker Unit</a
+                >
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a class="dropdown-item" routerLink="pure-hydrogen">Pure Hydrogen Generator Plant</a>
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a class="dropdown-item" routerLink="ammonia-purifier">Ammonia Cracking Purifier Unit</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <app-contact></app-contact>
+            <a class="nav-link active" aria-current="page" routerLink="contact">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="career">Careers</a>
+          </li>
+        </ul>
+        
+      </div>
+      <div class="touch-menu">
+        <button
+        *ngIf="!show_cross_icon"
+        class="navbar-toggler"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        [class.menu_icon_Class]="show_cross_icon"
+        (click)="openMenu()"
+      >
+        <span></span>
+        <span class="menu-text">MENU</span>
+        <span></span>
+      </button>
+      <app-contact></app-contact>
+        <button class="touch btn btn-outline-primary" *ngIf="!show_cross_icon" type="submit" (click)="showCenteredContainer()">
+          Get in Touch
+        </button>
+      </div>
+    </div>
+  </nav>
+</div>

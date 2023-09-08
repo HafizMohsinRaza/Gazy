@@ -1,0 +1,39 @@
+<div class="main-container">
+    <div class="header">
+      <div class="title">Only use for SEO</div>
+    </div>
+    <div class="card">
+      <div style="width: 60%" *ngIf="form">
+        <form [formGroup]="form" (submit)="onSubmit()">
+  
+          <mat-form-field>
+            <mat-label>Meta Title</mat-label>
+            <textarea matInput formControlName="heading" type="text" rows="5" ></textarea>
+  
+            <mat-error *ngIf="form.get('heading').invalid"
+              >Please enter Title.</mat-error
+            >
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Meta Description</mat-label>
+            <textarea matInput formControlName="description" type="text" rows="5"></textarea>
+            <mat-error *ngIf="form.get('description').invalid"
+              >Please enter description.</mat-error
+            >
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Meta Keywords</mat-label>
+            <textarea matInput formControlName="keyword" type="text" rows="5"></textarea>
+            <mat-error *ngIf="form.get('keyword').invalid"
+              >Please enter keywords.</mat-error
+            >
+          </mat-form-field>
+
+          <!-- <p-editor formControlName="text" [style]="{ height: '320px' }"></p-editor> -->
+          
+          <button class="submit-button" type="submit">Update</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  

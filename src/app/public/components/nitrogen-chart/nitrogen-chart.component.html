@@ -1,0 +1,79 @@
+<div class="chart">
+  <img src="assets/images/chart.png" alt="" />
+  <div class="mainTitle">Gaztron’s PSA Nitrogen (N2) Gas Generator Payback</div>
+  <div class="chart-description">
+    If your business relies on a steady supply of nitrogen, you're likely all
+    too familiar with the challenges of renting and delivering bulky nitrogen
+    cylinders. Not only do they take up valuable floor space and pose safety
+    risks, but the associated costs, downtime, and contractual obligations can
+    add up.
+  </div>
+
+  <div class="chart-description">
+    While the initial investment may seem daunting, Gaztron's nitrogen
+    generators typically pay for themselves in approximately 12 months, making
+    them essentially free to operate after that point. Plus, you'll have the
+    peace of mind of a reliable, cost-effective nitrogen supply that's under
+    your control.
+  </div>
+  <div class="inner-body">
+    <div class="chart-header">
+      <div class="payback">Payback Period</div>
+      <div class="saving-row">
+        <button
+          class="saving"
+          [class.active]="activeButton === 'saving'"
+          (click)="showSavingChart()"
+        >
+          Saving
+        </button>
+        <button
+          class="consumption"
+          [class.active]="activeButton === 'gas'"
+          (click)="showGasChart()"
+        >
+          Gas Consumption
+        </button>
+      </div>
+    </div>
+    <div class="divider1"></div>
+    <ng-container *ngIf="activeButton === 'saving'">
+      <div class="payback">{{ saving }}</div>
+      <div class="chart-container" *ngFor="let item of savingChart">
+        <div class="label">
+          {{ item.label }}
+        </div>
+        <div class="divider2"></div>
+        <div
+          class="bar"
+          style="background-color: #493ab1"
+          [style.width.%]="item.value"
+        >
+          {{ item.amount }}
+        </div>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="activeButton === 'gas'">
+      <div class="payback">{{ gas }}</div>
+      <div class="chart-container" *ngFor="let item of gasChart">
+        <div class="label">
+          {{ item.label }}
+        </div>
+        <div class="divider2"></div>
+        <div
+          class="bar"
+          style="background-color: #cb7c42"
+          [style.width.%]="item.value"
+        >
+          {{ item.amount }}
+        </div>
+      </div>
+    </ng-container>
+  </div>
+  <div class="chart-description">
+    Say goodbye!!! to the headaches of nitrogen tank rental and delivery, and
+    say hello to the convenience and cost savings of on-site nitrogen generation
+    plant with Gaztron. Invest in a long-term solution that will benefit your
+    business for years to come.
+  </div>
+</div>

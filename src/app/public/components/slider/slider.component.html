@@ -1,0 +1,56 @@
+<div class="main-container">
+  <div
+    id="carouselExampleIndicators"
+    class="carousel slide custom"
+    data-bs-ride="carousel"
+    (slide.bs.carousel)="onSlideChanged($event)"
+  >
+    <div class="carousel-indicators">
+      <button
+        type="button"
+        class="custom-button"
+        *ngFor="let imgUrl of imgCollection; let i = index"
+        (click)="onSlideChange(i)"
+        [attr.data-bs-target]="'#carouselExampleIndicators'"
+        [attr.data-bs-slide-to]="i"
+        [class.active]="i === 0"
+        aria-current="true"
+        [attr.aria-label]="'Slide ' + (i + 1)"
+      ></button>
+    </div>
+    <div class="carousel-inner">
+      <div
+        class="carousel-item"
+        *ngFor="let imgUrl of imgCollection; let i = index"
+        [class.active]="i === 0"
+      >
+        <div class="card">
+          <img [src]="imgUrl.logoPath" class="d-block" alt="Slide {{ i + 1 }}" />
+          <div class="title">
+            {{ imgUrl.heading }}
+          </div>
+          <div class="description">
+            {{ imgUrl.description }}
+          </div>
+          <button href="https://web.whatsapp.com/" class="quote-button">Request a quote</button>
+        </div>
+      </div>
+    </div>
+    <button
+      class="carousel-control-prev controller1"
+      type="button"
+      data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="prev"
+    >
+      <span><mat-icon>chevron_left</mat-icon></span>
+    </button>
+    <button
+      class="carousel-control-next controller2"
+      type="button"
+      data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="next"
+    >
+      <span style="text-align: center"><mat-icon>chevron_right</mat-icon></span>
+    </button>
+  </div>
+</div>

@@ -1,0 +1,102 @@
+<div class="quote-container">
+  <div class="quote-left-column">
+    <div class="quote-title">Request a quote.</div>
+    <div class="quote-left-sub">
+      Just submit your details and we’ll be in touch shortly.
+    </div>
+    <img src="assets/images/quote.png" alt="" />
+  </div>
+  <div class="quote-right-column">
+    <div *ngIf="!submitted">
+      <div class="quote-right-sub">I would like to discuss:</div>
+      <form [formGroup]="form" (submit)="onSubmit()">
+        <mat-form-field appearance="outline">
+          <mat-select [(value)]="selected"  (selectionChange)="onSelectionChange($event)">
+            <ng-container *ngFor="let option of options">
+              <ng-container *ngIf="option.value === selected">
+                <mat-option
+                  [value]="option.value"
+                  style="background-color: #354ed2"
+                  >{{ option.viewValue }}</mat-option
+                >
+              </ng-container>
+              <ng-container *ngIf="option.value !== selected">
+                <mat-option [value]="option.value">{{
+                  option.viewValue
+                }}</mat-option>
+              </ng-container>
+            </ng-container>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Full Name</mat-label>
+          <input matInput formControlName="name" type="text" />
+
+          <mat-error *ngIf="form.get('name').invalid"
+            >Please enter your name.</mat-error
+          >
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Email Mail</mat-label>
+          <input matInput formControlName="email" type="email" />
+          <mat-error *ngIf="form.get('email').invalid"
+            >Please enter a valid email.</mat-error
+          >
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Phone Number</mat-label>
+          <input matInput formControlName="phone" type="text" />
+
+          <mat-error *ngIf="form.get('phone').invalid"
+            >Please enter a valid phone number.</mat-error
+          >
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Your Message</mat-label>
+          <textarea matInput formControlName="message" rows="5"></textarea>
+
+          <mat-error *ngIf="form.get('message').invalid"
+            >Please enter a message.</mat-error
+          >
+        </mat-form-field>
+        <button mat-flat-button class="quote-button" type="submit">
+          Submit
+        </button>
+      </form>
+    </div>
+    <div *ngIf="submitted">
+      <div class="quote-wrapper">
+        <svg
+          class="checkmark"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 52 52"
+        >
+          <circle
+            class="checkmark__circle"
+            cx="26"
+            cy="26"
+            r="25"
+            fill="none"
+          />
+          <path
+            class="checkmark__check"
+            fill="none"
+            d="M14.1 27.2l7.1 7.2 16.7-16.8"
+          />
+        </svg>
+        <div class="submit-title">
+          Congratulations! <br />
+          We have received your inquiry
+        </div>
+        <div class="submit-sub">
+          Thank you so much for your inquiry! <br />
+          You can expect to hear back from our expert team very soon
+        </div>
+        <button mat-flat-button class="quote-button" (click)="resetForm()">
+          Request Another Quote
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

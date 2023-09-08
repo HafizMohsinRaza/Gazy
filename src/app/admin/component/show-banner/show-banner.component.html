@@ -1,0 +1,97 @@
+<!-- <div class="main-container">
+  <div class="header">
+    <div class="title">Home Slider Banner</div>
+
+    <a class="add-banner" mat-button routerLink="../create-banner">
+      Add New Banner</a
+    >
+  </div>
+  <div class="card">
+    <div style="width: 80%">
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Heading</th>
+              <th>Description</th>
+              <th>Url</th>
+              <th>Logo</th>
+              <th>Image</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let content of imgCollection">
+              <td>{{ content.heading }}</td>
+              <td>{{ content.description }}</td>
+              <td>{{ content.url }}</td>
+              <td><img [src]="content.logoPath" alt=""></td>
+              <td><img [src]="content.imagePath" alt=""></td>
+              <td>
+                <a class="update" [routerLink]="['../edit-banner', content._id]">Update</a>
+                <button class="delete" (click)="onDelete(content._id)">
+                  Delete
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div> -->
+<div class="main-container">
+  <div class="header">
+    <div class="title">Home Slider Banner</div>
+
+    <a class="add-banner" mat-button routerLink="../create-banner">
+      Add New Banner</a
+    >
+  </div>
+
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+      <ng-container matColumnDef="_id">
+        <th mat-header-cell *matHeaderCellDef>ID</th>
+        <td mat-cell *matCellDef="let element">{{ element._id }}</td>
+      </ng-container>
+      <ng-container matColumnDef="heading">
+        <th mat-header-cell *matHeaderCellDef>Title</th>
+        <td mat-cell *matCellDef="let element">{{ element.heading }}</td>
+      </ng-container>
+      <ng-container matColumnDef="description">
+        <th mat-header-cell *matHeaderCellDef>Short Description</th>
+        <td mat-cell style="width: 35%;" *matCellDef="let element">{{ element.description }}</td>
+      </ng-container>
+      <ng-container matColumnDef="url">
+        <th mat-header-cell *matHeaderCellDef>Bannner Url</th>
+        <td mat-cell *matCellDef="let element">{{ element.url }}</td>
+      </ng-container>
+      <ng-container matColumnDef="logoPath">
+        <th mat-header-cell *matHeaderCellDef>Logo</th>
+        <td mat-cell *matCellDef="let element"><img style="width: 60px;" [src]="element.logoPath" alt=""></td>
+      </ng-container>
+      <ng-container matColumnDef="imagePath">
+        <th mat-header-cell *matHeaderCellDef>Image</th>
+        <td mat-cell *matCellDef="let element"><img style="width: 150px; margin: 5px;" [src]="element.imagePath" alt=""></td>
+      </ng-container>
+      <ng-container matColumnDef="edit">
+        <th mat-header-cell *matHeaderCellDef>Edit</th>
+        <td mat-cell *matCellDef="let element">
+          <button class="edit">
+            <i [routerLink]="['../edit-banner', element._id]" class="fa-solid fa-pen-to-square"></i>
+          </button>
+        </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="delete">
+        <th mat-header-cell *matHeaderCellDef>Delete</th>
+        <td mat-cell *matCellDef="let element">
+          <button class="delete" (click)="onDelete(element._id)"><i class="fa-solid fa-trash"></i></button>
+        </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+
+</div>

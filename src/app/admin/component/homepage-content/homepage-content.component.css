@@ -1,0 +1,211 @@
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+.title{
+    font-family: DM Sans;
+font-size: 28px;
+font-weight: 700;
+line-height: 38px;
+letter-spacing: 0px;
+text-align: left;
+color: #000000;
+margin-block: 20px;
+}
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 2.5%;
+}
+.add-banner{
+    font-family: DM Sans;
+font-size: 18px;
+font-weight: 700;
+line-height: 38px;
+letter-spacing: 0px;
+text-align: left;
+border-radius: 5px;
+padding: 20px;
+margin-block: 20px;
+
+}
+.add-banner:hover{
+    background-color: #cecece;
+}
+.card{
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 95%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px;
+}
+.main-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.active{
+    background-color: #000000;
+    color: white;
+}
+
+
+/* table Data*/
+/* 
+.title{
+  font-family: DM Sans;
+font-size: 24px;
+font-weight: 700;
+line-height: 31px;
+letter-spacing: 0em;
+text-align: left;
+margin: 20px;
+}
+.main-container{
+  margin-bottom: 30px;
+}
+.divider{
+  height: 2px;
+  width: 100%;
+  background-color: #E7E6E4;  
+}
+.description{
+  font-family: DM Sans;
+font-size: 16px;
+font-weight: 400;
+line-height: 21px;
+letter-spacing: 0.04em;
+text-align: left;
+margin: 20px;
+}
+.table-container{
+  width: 100%;
+}
+table{
+  width: 100%;
+  font-family: DM Sans;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 0em;
+  color: #000000;
+
+}
+th{
+  border: 1px solid rgb(219, 219, 219);
+  height: 50px;
+  font-weight: bolder;
+}
+th:first-child{
+  border-radius: 8px 0 0 0;
+}
+th:last-child{
+  border-radius: 0 8px 0 0;
+}
+td{
+  height: 70px;
+  border: 1px solid rgb(219, 219, 219);
+}
+
+td,th{
+  padding-inline: 20px;
+}
+tfoot th{
+  border-radius: 0 0 8px 8px;
+}
+table th:last-child, td:last-child  {
+  width: 20%;
+}
+td img{
+  height: 100px;
+  width: 100px;
+}
+
+.update, .delete{
+  color: white;
+  border: none;
+  border-radius: 8px;
+  width: 100px;
+  height: 40px;
+  margin-inline: 5px;
+}
+.update{
+  background-color: #68D157;
+}
+.delete{
+  background-color: red;
+}
+@media screen and (max-width: 800px) {
+  th {
+    display: none;
+  }
+
+  td {
+    display: grid;
+  }
+
+  td::before {
+    content: attr(data-label);
+  }
+  tbody tr td:nth-child(1){
+      font-weight: bold;
+      font-size: 16px;
+  }
+}
+
+ */
+
+
+::ng-deep .demo-table {
+  width: 100%;
+}
+
+::ng-deep .mat-mdc-row .mat-mdc-cell {
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid transparent;
+  cursor: pointer;
+}
+
+::ng-deep .mat-mdc-row:hover .mat-mdc-cell {
+  border-color: currentColor;
+}
+
+::ng-deep .demo-row-is-clicked {
+  font-weight: bold;
+}
+
+::ng-deep .mdc-data-table__table {
+  min-width: 95% !important;
+  width: 95% !important;
+}
+.edit,.delete{
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #333;
+}
+
+.delete:hover{
+  color: red;
+}
+.edit:hover{
+  color: blue;
+}
+
+td,th{
+    border-bottom: 1px solid rgb(226, 226, 226) !important;
+    
+}
+td{
+    vertical-align: top;
+    padding-block: 10px;
+}
+td:last-child{
+    padding-top: 5%;
+}

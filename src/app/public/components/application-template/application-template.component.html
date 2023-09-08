@@ -1,0 +1,15 @@
+<div class="image-container">
+  <img src="assets/images/application.png" alt="About" class="img-responsive" />
+  <h3>{{title}}</h3>
+  <p>
+    {{description}}
+  </p>
+  <div class="application-body">
+    <div class="application-inner" *ngFor="let data of application">
+      <img src="{{ data.image }}" alt="" class="img" />
+      <div class="application-info">
+        {{ data.title }}
+      </div>
+    </div>
+  </div>
+</div>

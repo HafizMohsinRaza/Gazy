@@ -1,0 +1,57 @@
+mat-card {
+    width: 400px;
+    height: 450px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+mat-error{
+    font-size: 12px;
+}
+mat-form-field {
+    width: 100%;
+}
+img{
+    /* height: 100px; */
+    width: 150px;
+    margin-block: 50px;
+}
+  
+.bottom{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    padding-inline: 30px;
+    height: 100%;
+}
+
+.custom-button {
+    background-color: #354ED2 !important;
+    color: white !important; 
+    height: 50px;
+    width: 120px;
+    margin-bottom: 20px;
+  }
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+a {
+    text-align: end;
+}
+a p{
+    color: #354ED2;
+    font-size: 18px;
+    font-family: "DM Sans", sans-serif;
+    /* padding-bottom: 20px; */
+    margin: 20px;
+    cursor: pointer;
+
+}

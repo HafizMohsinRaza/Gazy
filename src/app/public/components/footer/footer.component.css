@@ -1,0 +1,258 @@
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+
+
+  .main-container{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background: linear-gradient(to bottom, black 0%, black 40%, #354ED2 100%);
+    overflow-inline: hidden;
+    padding-top: 40px;
+  }
+  .left img{
+    width: 220px;
+    height: 90px;
+  }
+  .left-column{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .right{
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    justify-content: center;
+  }
+  .social{
+    display: flex;
+    align-items: center;
+  }
+  .row{
+    display: flex;
+    align-content: flex-start;
+    max-width: 33%;
+    min-width: 350px;
+    padding-right: 60px;
+    margin-bottom: 40px;
+  }
+  .row a{
+    padding-block: 10px;
+  }
+  .left{
+    width: 30%;
+    padding-inline: 40px;
+    margin-bottom: 50px;
+  }
+
+
+  .row a{
+    text-decoration: none;
+    color: white;
+    margin-block: 5px;
+    font-size: 16px;
+  }
+  .divider{
+
+    height: 2px;
+    background-color: white;
+    /* width: 80%; */
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
+
+
+
+.instagram,
+.facebook,
+.twitter,
+.linkdin,
+.youtube,
+.whatsapp,
+.phone,
+.gmail,
+.location {
+  border-radius: 50%;
+  font-size: 16px;
+  transition: 0.5s;
+  cursor: pointer;
+  background-color: white;
+  margin-right: 12px;
+}
+.facebook {
+  padding: 11px 14px;
+  color: rgb(19, 19, 136);
+}
+.instagram {
+  padding: 12px;
+  color: #c72929ea;
+}
+.linkdin {
+  padding: 12px 13px;
+  color: #0693e3;
+}
+.twitter {
+  padding: 12px;
+  color: #56bbfa;
+}
+.phone {
+    padding: 12px;
+    color: green;
+  }
+  .whatsapp {
+    font-size: 18px;
+    padding: 12px;
+    color: green;
+  }
+  .location {
+    padding: 12px 13px;
+    color: blue;
+  }
+  .gmail {
+    padding: 12px 11px;
+    color: blue;
+  }
+.youtube {
+  padding: 12px 11px;
+  color: red;
+}
+.instagram:hover {
+  color: white;
+  background-color: #c72929ea;
+}
+.facebook:hover {
+  color: white;
+  background-color: rgb(19, 19, 136);
+}
+.linkdin:hover {
+  color: white;
+  background-color: #0693e3;
+}
+.twitter:hover {
+  color: white;
+  background-color: #8ed1fc;
+}
+.youtube:hover {
+  color: white;
+  background-color: red;
+}
+.phone:hover {
+    color: white;
+    background-color: green
+  }
+  .gmail:hover {
+    color: white;
+    background-color: blue;
+  }
+  .whatsapp:hover {
+    color: white;
+    background-color: green;
+  }
+  .location:hover {
+    color: white;
+    background-color: blue;
+  } 
+
+
+.full{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+  .outer-hexagon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 60px;
+    width: 105px;
+    height: 120px;
+    background-color: #354ED2;
+    position: relative;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  }
+  .inner-hexagon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 85px;
+    background-color: white;
+    color: #354ED2;
+    font-size: 44px;
+    position: relative;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  }
+
+.copyright{
+    height: 80px;
+    background: #F9F8FE;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 18px;
+    font-family: DM Sans;
+    padding-inline: 20px;
+    color: #354ED2;
+}
+.description{
+    margin-block: 10px;
+    font-family: Courier,;
+}
+.links{
+    margin-block: 30px;
+}
+.left img{
+  height: 80px;
+    width: 220px;
+}
+
+.language{
+
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: DM Sans;
+font-size: 16px;
+font-weight: 500;
+line-height: 21px;
+letter-spacing: 0em;
+text-align: left;
+
+}
+
+
+@media (max-width:1400px) {
+  .left{
+      width: 700px;
+      min-width: 50%;
+  }
+  .left-column{
+
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+  .right{
+    width: 90%;
+    padding-left: 30px;
+  }
+  .row{
+      margin-top: 0px;
+      margin-bottom: 60px;
+      min-width: 60%;
+  }
+
+}
+
+@media (max-width:1000px) {
+  .row{
+    min-width: 100%;
+  }  
+  .left{
+    min-width: 80%;
+}
+}

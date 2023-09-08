@@ -1,0 +1,107 @@
+<div class="main-container">
+  <div class="header">
+    <div class="title">Contact Us</div>
+  </div>
+  <div class="card">
+    <div style="width: 60%" *ngIf="form">
+      <form [formGroup]="form" (submit)="onSubmit()">
+        <mat-form-field>
+          <mat-label>Address 1</mat-label>
+          <input matInput formControlName="address1" type="text" />
+
+          <mat-error *ngIf="form.get('address1').invalid"
+            >Please enter Address.</mat-error
+          >
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Address 2</mat-label>
+          <input matInput formControlName="address2" type="text" rows="4" />
+          <mat-error *ngIf="form.get('address2').invalid"
+            >Please enter Address.</mat-error
+          >
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Address 3</mat-label>
+          <input matInput formControlName="address3" type="text" rows="4" />
+          <mat-error *ngIf="form.get('address3').invalid"
+            >Please enter Address.</mat-error
+          >
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Number 1</mat-label>
+          <input matInput formControlName="number1" type="text" rows="4" />
+          <mat-error *ngIf="form.get('number1').invalid"
+            >Please enter Number.</mat-error
+          >
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Number 2</mat-label>
+          <input matInput formControlName="number2" type="text" rows="4" />
+          <mat-error *ngIf="form.get('number2').invalid"
+            >Please enter Number.</mat-error
+          >
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Number 3</mat-label>
+          <input matInput formControlName="number3" type="text" rows="4" />
+          <mat-error *ngIf="form.get('number3').invalid"
+            >Please enter Number.</mat-error
+          >
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Email 1</mat-label>
+          <input matInput formControlName="email1" type="text" />
+
+          <mat-error *ngIf="form.get('email1').invalid"
+            >Please enter Email.</mat-error
+          >
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Email 2</mat-label>
+          <input matInput formControlName="email2" type="text" />
+
+          <mat-error *ngIf="form.get('email2').invalid"
+            >Please enter Email.</mat-error
+          >
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>About</mat-label>
+          <input matInput formControlName="about" type="text" rows="4" />
+          <mat-error *ngIf="form.get('about').invalid"
+            >Please enter About.</mat-error
+          >
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Facebook Url</mat-label>
+          <input matInput formControlName="facebook" type="text" rows="4" />
+          <mat-error *ngIf="form.get('facebook').invalid"
+            >Please enter Facebook Url.</mat-error
+          >
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Instagram Url</mat-label>
+          <input matInput formControlName="instagram" type="text" rows="4" />
+          <mat-error *ngIf="form.get('instagram').invalid"
+            >Please enter Instagram Url.</mat-error
+          >
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Twitter Url</mat-label>
+          <input matInput formControlName="twitter" type="text" rows="4" />
+          <mat-error *ngIf="form.get('twitter').invalid"
+            >Please enter Twitter Url.</mat-error
+          >
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>LinkedIn Url</mat-label>
+          <input matInput formControlName="linkedin" type="text" rows="4" />
+          <mat-error *ngIf="form.get('linkedin').invalid"
+            >Please enter LinkedIn Url.</mat-error
+          >
+        </mat-form-field>
+
+        <button class="submit-button" type="submit">Save Contact</button>
+      </form>
+    </div>
+  </div>
+</div>

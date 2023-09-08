@@ -1,0 +1,23 @@
+<div class="industry-image-container">
+    <img src="assets/images/industry-logo.png" alt="About" class="industry-img-responsive" />
+    <div class="industry-title">Industries that we have worked with</div>
+  <div class="industry-card">
+    <p-carousel [value]="brands" [numVisible]="3" [numScroll]="1" [circular]="true" [responsiveOptions]="responsiveOptions">
+      <ng-template let-brand pTemplate="item">
+        <div class="border-1 surface-border border-round m-2 text-center py-5 px-3">
+          <div class="mb-3 industry-border-img">
+            <img [src]="brand.image" [alt]="" class="w-6 shadow-2 " />
+            <div class="industry-content">
+                <div class="industry-inner-title">
+                    Cement Industries
+                </div>
+                <div class="industry-description">
+                    Keeping the cement industry future-equipped with the latest mechanism and machinery.
+                </div>
+            </div>
+          </div>
+
+        </div>
+      </ng-template>
+    </p-carousel>
+  </div>

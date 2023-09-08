@@ -1,0 +1,213 @@
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+
+.main{
+  background-color: white;
+  box-shadow: 0px 1px 1px rgb(148, 148, 148);
+}
+.contact-bar{
+  color: white;
+  background-color: #354ED2;
+  height: 40px;
+  width: 100%;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 20px;
+}
+.menu-text{
+  font-weight: 700;
+  color: #000000;
+}
+.logo img{
+  width: 120px;
+  margin-block: 5px;
+}
+.contact-bar a{
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+}
+
+.contact-bar a:hover{
+  color: black;
+}
+.contact-bar i{
+  margin-right: 8px;
+}
+.touch-menu{
+  display: flex;
+  gap: 10px;
+}
+
+@media (max-width: 600px) {
+    .contact-info{
+      display: none;
+    }
+    .contact-bar{
+      justify-content: center;
+    }
+}
+
+
+.navbar-toggler span:nth-child(1){
+    height: 3px;
+    width: 40px;
+    background-color: #000000;
+  }
+
+  .navbar-toggler span:nth-child(2){
+    font-size: 12px;
+    margin-block: 5px;
+  }
+  .navbar-toggler span:nth-child(3){
+    height: 3px;
+    width: 40px;
+    background-color: #090014;
+  }
+  .navbar-toggler{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: none;
+  }
+
+  .touch:hover{
+    background-color: #354ED2;
+  }
+  .navbar-toggler:focus {
+    outline: none; 
+    box-shadow: none; 
+  }
+  .menu_icon_Class span:nth-child(2){
+    display: none;
+  }
+  .menu_icon_Class .touch{
+    display: none;
+  }
+  .menu_icon_Class span:nth-child(1) {
+    transform: rotate(45deg);
+  }
+  .menu_icon_Class span:nth-child(3) {
+    transform: rotate(-47deg);
+    margin-top: -3px;
+  }
+
+@media (min-width:1200px) {
+    .navbar-toggler{
+        display: none !important;
+    }
+
+}
+
+/* @media (max-width:1108px) {
+  .touch{
+      display: none !important;
+  }
+
+} */
+
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.left-menu{
+  font-size: 30px;
+  margin-right: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid rgb(213, 208, 255);
+
+}
+.left-menu:hover{
+  color: white;
+  background-color: #354ED2;
+
+}
+
+@media (min-width: 1000) {
+  .left-menu{
+    font-size: 12px;
+  }
+
+}
+
+.nav-link:hover{
+  cursor:  pointer !important;
+  color: #354ED2;
+}
+.nav-link:focus{
+  color: #354ED2;
+}
+.nav-item{
+  font-size: 16px;
+  font-weight: 500;
+}
+.dropdown-menu{
+  background-color: white;
+  color: white;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  border: 2px solid #354ED2;
+}
+.dropdown-item{
+  width: auto !important;
+  color: black;
+  margin-inline: 20px;
+  padding: 10px;
+  background-color: white;
+
+}
+.dropdown-item:hover{
+  
+  color: #354ED2;
+}
+
+
+.dropdown-divider{
+  background-color: white;
+  margin-inline: 30px;
+  margin-block: 0px;
+}
+.custom {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100%;
+  gap: 1%;
+}
+.touch {
+  width: 150px;
+}
+@media (max-width: 1200px) {
+  .custom {
+    align-items: start !important;
+  }
+  .dropdown-item{
+    white-space: pre-wrap;
+  }
+  .nav-item{
+    width: 100%;
+  }
+}
+.nav-item:hover .dropdown-menu{
+  display: block;
+  
+}
+@media (max-width: 800px) {
+  .touch{
+    width: 120px;
+  }
+}
+@media (max-width: 1000px) {
+  .touch{
+    width: 105px;
+    padding: 5px !important;
+  }
+}

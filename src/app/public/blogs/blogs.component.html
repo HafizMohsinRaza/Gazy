@@ -1,0 +1,46 @@
+<div class="body">
+  <div class="inner">
+    <div class="inner-body">
+      <img src="assets/images/blogs.png" alt="About" class="img-responsive" />
+    </div>
+  </div>
+  <div class="inner">
+    <div class="inner-body">
+      <app-ourblogs></app-ourblogs>
+    </div>
+  </div>
+  <div class="inner">
+    <div class="inner-body">
+      <app-subscribe></app-subscribe>
+    </div>
+  </div>
+  <div class="inner">
+    <div class="inner-body">
+      <app-key-products></app-key-products>
+    </div>
+  </div>
+
+  <div class="inner">
+    <div class="inner-body">
+      <app-quote [options]="options"></app-quote>
+    </div>
+  </div>
+
+  <div class="inner">
+    <div class="inner-body">
+      <app-contactpage> </app-contactpage>
+    </div>
+  </div>
+  <div class="inner">
+    <div class="inner-body">
+      <app-application-template
+        [application]="applications"
+        [title]="'Gaztron’s Ammonia Cracker Applications'"
+        [description]="
+          'Our unwavering dedication to research and development has established us as frontrunners in ammonia cracker technologies, which find widespread applications in various industries worldwide. Our continuous focus on innovation has positioned us as industry leaders in meeting the demand for hydrogen or hydrogen-nitrogen mixtures in diverse industrial sectors such as:-'
+        "
+      >
+      </app-application-template>
+    </div>
+  </div>
+</div>

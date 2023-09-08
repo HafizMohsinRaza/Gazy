@@ -1,0 +1,79 @@
+<div class="main-container">
+  <div class="slider">
+    <div class="heading">Gaztron’s On-Site PSA Nitrogen Generator Plant</div>
+    <div class="divider"></div>
+    <app-nav-slider></app-nav-slider>
+    <p class="description">
+      Gaztron Engineering Pvt Ltd is India’s leading designer, manufacturer, and
+      exporter of top-quality On-Site PSA Nitrogen (N2) Gas Generator Plants.
+      Our advanced technologies and unmatched expertise in the field enable us
+      to offer reliable, cost-effective, and high-performance gas generation
+      plant solutions to various industries worldwide.
+    </p>
+    <br />
+    <p class="description">
+      Our On-Site PSA Nitrogen (N2) Gas Generator Plants utilize the Pressure
+      Swing Adsorption (PSA) technology to produce high-purity nitrogen gas with
+      nitrogen purity ranging from 95% to 99.9998%. These generators are
+      designed to cater to a diverse range of industrial applications, such as
+      <span style="font-weight: bold"
+        >chemical, pharmaceuticals, electronics, food and beverage, oil & gas
+        industry, inertization system and many more.</span
+      >
+    </p>
+    <br />
+    <p class="description">
+      Furthermore, our On-Site Nitrogen (N2) Gas Generator Plants are equipped
+      with advanced features,
+      <span style="font-weight: bold"
+        >such as PLC control, touch screen HMI, dew point monitoring, oxygen
+        analyzer, and automatic shutdown</span
+      >
+      in case of any system malfunction or failure. We also provide gas
+      discharge pressure options as per the specific needs of our clients,
+      ranging from 5 Kg/cm2 to 200 Kg/cm2.
+    </p>
+  </div>
+  <div class="slider">
+    <app-specialization
+      mainTitle="Gaztron’s Specialisation"
+      mainDescription="Our On-Site PSA Nitrogen (N2) Gas Generator Plants are utilised in diverse industries worldwide, and our steadfast commitment to research and development has positioned us as industry pioneers in the following categories :"
+      mainImage="assets/images/special.png"
+      [products]="specialization"
+    ></app-specialization>
+  </div>
+  <div class="slider">
+    <app-specialization
+      mainTitle="Gaztron’s PSA Nitrogen Gas Generator Plant Models"
+      mainDescription="Our PSA Nitrogen (N2) Gas Generator Plants are available in different capacities, ranging from 10 Nm3/hr to 1000 Nm3/hr, and can be customized as per the specific requirements of our clients. We offer a broad range of nitrogen purity options to cater to different applications, including 95%, 97%, 99%, 99.5%, 99.9%, 99.99%, and 99.9998%."
+      mainImage="assets/images/nitrogen-generator.png"
+      [products]="nitrogen"
+    ></app-specialization>
+  </div>
+  <div class="slider">
+    <app-specification
+      title="Technical Specifications of Gaztron’s On-Site PSA Nitrogen (N2) Gas Generator Models"
+      description="We've engineered our PSA nitrogen (n2) gas generator plants to provide the most cost-effective nitrogen production solution available, leveraging advanced technology to generate nitrogen gas at a fraction of the cost of competing options."
+      [tableContent]="tableContent"
+      [headings]="tableHeadings"
+      [backgroundColor]="'#F3F2F1'"
+    ></app-specification>
+  </div>
+  <div class="slider">
+    <app-generators
+      mainImage="assets/images/generator-logo.png"
+      mainTitle="What sets our PSA Nitrogen Generator apart from others"
+      [content]="generators"
+    ></app-generators>
+  </div>
+  <app-nitrogen-chart></app-nitrogen-chart>
+  <div class="slider">
+    <app-questions [questions]="questions" [color]="'#354ed2'" [backgroundColor]="'#FFFFFF'" [image]="'assets/images/question-blue.png'"></app-questions>
+  </div>
+  <div class="slider">
+    <app-quote [options]="options"></app-quote>
+  </div>
+  <div class="slider">
+    <app-contactpage></app-contactpage>
+  </div>
+</div>

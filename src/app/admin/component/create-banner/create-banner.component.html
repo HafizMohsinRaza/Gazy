@@ -1,0 +1,87 @@
+<div class="main-container">
+  <div class="header">
+    <div class="title">Home Slider Banner</div>
+  </div>
+  <div class="card">
+    <div style="width: 60%" *ngIf="form">
+      <form [formGroup]="form" (submit)="onSubmit()">
+        <!-- <div class="banner-logo">
+              <img [src]="logoPreview" alt="">
+              <button class="image-button" mat-button type="button" (click)="logoPicker.click()">
+                Pick Logo
+              </button>
+              <input type="file" #logoPicker (change)="onLogoPicked($event)" />
+            </div> 
+            <div class="display-image">
+              <img [src]="imagePreview" alt="">
+              <button class="image-button" mat-button type="button" (click)="imagePicker.click()">
+                Pick Image
+              </button>
+              <input type="file" #imagePicker (change)="onImagePicked($event)" />
+            </div>  -->
+
+        <mat-form-field>
+          <mat-label>Banner Heading</mat-label>
+          <input matInput formControlName="heading" type="text" />
+
+          <mat-error *ngIf="form.get('heading').invalid"
+            >Please enter heading.</mat-error
+          >
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Short Description</mat-label>
+          <textarea matInput formControlName="description" type="description" ></textarea>
+          <mat-error *ngIf="form.get('description').invalid"
+            >Please enter description.</mat-error
+          >
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Slider Banner Url</mat-label>
+          <input matInput formControlName="url" type="url" />
+          <mat-error *ngIf="form.get('url').invalid"
+            >Please enter a valid url.</mat-error
+          >
+        </mat-form-field>
+        <div style="display: flex; gap: 10px; margin-block: 20px">
+          <div>
+            <button
+              class="image-button"
+              mat-stroked-button
+              type="button"
+              (click)="logoPicker.click()"
+            >
+              Pick Logo
+            </button>
+            <input type="file" #logoPicker (change)="onLogoPicked($event)" />
+            <div class="banner-logo" *ngIf="logoPreview !== '' && logoPreview">
+              <img [src]="logoPreview" alt="" />
+
+              
+            </div>
+          </div>
+          <div>
+            <button
+              class="image-button"
+              mat-stroked-button
+              type="button"
+              (click)="imagePicker.click()"
+            >
+              Pick Image
+            </button>
+            <input
+                type="file"
+                #imagePicker
+                (change)="onImagePicked($event)"
+              />
+            <div class="display-image" *ngIf="imagePreview !== '' && imagePreview">
+              <img [src]="imagePreview" alt="" />
+
+              
+            </div>
+          </div>
+        </div>
+        <button class="submit-button" type="submit">Save Banner</button>
+      </form>
+    </div>
+  </div>
+</div>

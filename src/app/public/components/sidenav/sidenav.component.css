@@ -1,0 +1,110 @@
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+
+.side-menu {
+  width: 350px;
+  height: 100%;
+  background-color: #4157c7;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  left: -350px;
+  transition: left 0.3s;
+}
+.side-menu.open {
+  left: 0;
+}
+.content {
+  margin: 30px;
+  padding-top: 60px;
+  font-size: 16px;
+  color: white;
+}
+.content a {
+  text-decoration: none;
+  color: white;
+  line-height: 1.5;
+}
+.content a:hover {
+  color: black;
+}
+.icon {
+  position: absolute;
+  right: 30px;
+  top: 20px;
+  cursor: pointer;
+  color: white;
+  font-size: 32px;
+}
+.icon:hover {
+  color: black;
+}
+
+.phone-info {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+}
+
+.social {
+  margin-top: 30px;
+}
+.fa-phone {
+  margin-bottom: 20px;
+}
+
+.phone-info {
+  margin-block: 30px;
+}
+
+.instagram,
+.facebook,
+.twitter,
+.linkdin,
+.youtube {
+  border-radius: 50%;
+  font-size: 14px;
+  transition: 0.5s;
+  cursor: pointer;
+  background-color: white;
+  margin-inline: 5px;
+}
+.facebook {
+  padding: 11px 14px;
+  color: rgb(19, 19, 136);
+}
+.instagram {
+  padding: 12px;
+  color: #c72929ea;
+}
+.linkdin {
+  padding: 12px 13px;
+  color: #0693e3;
+}
+.twitter {
+  padding: 12px;
+  color: #56bbfa;
+}
+.youtube {
+  padding: 12px 11px;
+  color: red;
+}
+.instagram:hover {
+  color: white;
+  background-color: #c72929ea;
+}
+.facebook:hover {
+  color: white;
+  background-color: rgb(19, 19, 136);
+}
+.linkdin:hover {
+  color: white;
+  background-color: #0693e3;
+}
+.twitter:hover {
+  color: white;
+  background-color: #8ed1fc;
+}
+.youtube:hover {
+  color: white;
+  background-color: red;
+}

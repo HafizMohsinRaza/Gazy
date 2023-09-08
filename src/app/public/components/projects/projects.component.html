@@ -1,0 +1,21 @@
+<div class="slider-image-container">
+  <img
+    src="assets/images/project.png"
+    alt="About"
+    class="project-img-responsive"
+  />
+  <div class="project-title">Our Projects</div>
+  <div class="project-description">
+    Gaztron’s PSA Gas Generator Plants have found extensive usage in various
+    industries worldwide, and our unwavering dedication to research and
+    development has established us as frontrunners in the industry.
+  </div>
+  <div class="project-images">
+    <div *ngFor="let data of projects">
+      <div class="one-project">
+          <img src="{{ data.images }}" alt="project1" />
+          <div class="project-info">{{ data.title }}</div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,73 @@
+<div class="main-container">
+    <div class="header">
+      <div class="title">Team</div>
+    </div>
+    <div class="card">
+      <div style="width: 60%" *ngIf="form">
+        <form [formGroup]="form" (submit)="onSubmit()">
+  
+          <mat-form-field>
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="name" type="text" />
+  
+            <mat-error *ngIf="form.get('name').invalid"
+              >Please enter name.</mat-error
+            >
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Designation</mat-label>
+            <input matInput formControlName="designation" type="text" rows="4">
+            <mat-error *ngIf="form.get('designation').invalid"
+              >Please enter designation.</mat-error
+            >
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Facebook Url</mat-label>
+            <input matInput formControlName="facebook" type="text" rows="4">
+            <mat-error *ngIf="form.get('facebook').invalid"
+              >Please enter facebook url.</mat-error
+            >
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Twitter Url</mat-label>
+            <input matInput formControlName="twitter" type="text" rows="4">
+            <mat-error *ngIf="form.get('twitter').invalid"
+              >Please enter twitter url.</mat-error
+            >
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Instagram</mat-label>
+            <input matInput formControlName="instagram" type="text" rows="4">
+            <mat-error *ngIf="form.get('instagram').invalid"
+              >Please enter instagram url.</mat-error
+            >
+          </mat-form-field>
+          
+          <div style="display: flex; gap: 10px; margin-block: 20px">
+            <div>
+              <button
+                class="image-button"
+                mat-stroked-button
+                type="button"
+                (click)="imagePicker.click()"
+              >
+                Pick Image
+              </button>
+              <input
+                  type="file"
+                  #imagePicker
+                  (change)="onImagePicked($event)"
+                />
+              <div class="display-image" *ngIf="imagePreview !== '' && imagePreview">
+                <img [src]="imagePreview" alt="" />
+  
+                
+              </div>
+            </div>
+          </div>
+          <button class="submit-button" type="submit">Save Team</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  

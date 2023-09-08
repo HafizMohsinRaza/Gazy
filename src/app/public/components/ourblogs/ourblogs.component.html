@@ -1,0 +1,36 @@
+
+
+
+
+<!-- <div class="image-grid">
+    <ng-container *ngFor="let imageIndex of getImageIndexes()">
+      <img src="assets/images/b{{imageIndex}}.png" class="img-fluid" alt="Our Blogs">
+    </ng-container>
+  </div> -->
+  
+
+<div class="slider-image-container">
+    <img
+      src="assets/images/b.png"
+      alt="About"
+      class="project-img-responsive"
+    />
+    <div class="project-title">Our Blogs</div>
+    <div class="project-description">
+      Gaztron’s PSA Gas Generator Plants have found extensive usage in various
+      industries worldwide, and our unwavering dedication to research and
+      development has established us as frontrunners in the industry.
+    </div>
+    <div class="project-images">
+      <div *ngFor="let data of getImages()">
+        <div class="one-project" (click)="onExpanded(data.title,data.image)">
+            <img src="{{data.image}}" alt="project1" />
+            <div class="project-info">{{data.title}}</div>
+            
+        </div>
+      </div>
+    </div>
+  </div>
+  <p-paginator  [first]="first" [rows]="rows" [totalRecords]="45" (onPageChange)="onPageChange($event)">
+</p-paginator>
+  

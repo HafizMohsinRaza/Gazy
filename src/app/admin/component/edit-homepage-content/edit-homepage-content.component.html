@@ -1,0 +1,66 @@
+<div class="main-container">
+    <div class="header">
+      <div class="title">Home Page Contant</div>
+    </div>
+    <div class="card">
+      <div style="width: 60%" *ngIf="form">
+        <form [formGroup]="form" (submit)="onSubmit()">
+  
+          <mat-form-field>
+            <mat-label>Heading</mat-label>
+            <input matInput formControlName="heading" type="text" />
+  
+            <mat-error *ngIf="form.get('heading').invalid"
+              >Please enter heading.</mat-error
+            >
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Contant</mat-label>
+            <textarea matInput formControlName="contant" type="text" rows="4"></textarea>
+            <mat-error *ngIf="form.get('contant').invalid"
+              >Please enter Text.</mat-error
+            >
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Text 1</mat-label>
+            <textarea matInput formControlName="text1" type="text" rows="4"></textarea>
+            <mat-error *ngIf="form.get('text1').invalid"
+              >Please enter Text.</mat-error
+            >
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Text 2</mat-label>
+            <textarea matInput formControlName="text2" type="text" rows="4"></textarea>
+            <mat-error *ngIf="form.get('text2').invalid"
+              >Please enter Text.</mat-error
+            >
+          </mat-form-field>
+          
+          <div style="display: flex; gap: 10px; margin-block: 20px">
+            <div>
+              <button
+                class="image-button"
+                mat-stroked-button
+                type="button"
+                (click)="imagePicker.click()"
+              >
+                Pick Image
+              </button>
+              <input
+                  type="file"
+                  #imagePicker
+                  (change)="onImagePicked($event)"
+                />
+              <div class="display-image" *ngIf="imagePreview !== '' && imagePreview">
+                <img [src]="imagePreview" alt="" />
+  
+                
+              </div>
+            </div>
+          </div>
+          <button class="submit-button" type="submit">Save</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  

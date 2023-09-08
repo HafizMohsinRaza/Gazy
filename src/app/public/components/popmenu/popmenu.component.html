@@ -1,0 +1,81 @@
+<!-- <mat-dialog-content style="padding: 0 !important; height: 900px !important;" class="pop-container"> -->
+  <div class="overlay" *ngIf="showPopup">
+  <div class="pop">
+    <div class="header">
+      <div class="title">{{ positionTitle }}</div>
+      <!-- data.positionTitle  -->
+      <i class="fa-solid fa-xmark" (click)="hideContainer()"></i>
+    </div>
+    <div class="divider"></div>
+    <form [formGroup]="form" (submit)="onSubmit()">
+      <div class="lable">Full Name*</div>
+      <mat-form-field appearance="outline">
+        <input
+          matInput
+          formControlName="name"
+          type="text"
+          placeholder="Eg, Your Name"
+        />
+        <mat-icon matSuffix>person</mat-icon>
+        <mat-error *ngIf="form.get('name').invalid"
+          >Please enter your name.</mat-error
+        >
+      </mat-form-field>
+      <div class="lable">Email*</div>
+      <mat-form-field appearance="outline">
+        <input
+          matInput
+          formControlName="email"
+          type="email"
+          placeholder="Eg, Your Email"
+        />
+        <mat-icon matSuffix>email</mat-icon>
+        <mat-error *ngIf="form.get('email').invalid"
+          >Please enter a valid email.</mat-error
+        >
+      </mat-form-field>
+      <div class="lable">Phone Number*</div>
+      <mat-form-field appearance="outline">
+        <input
+          matInput
+          formControlName="phone"
+          type="text"
+          placeholder="Eg, Your Phone Number"
+        />
+        <mat-icon matSuffix>phone</mat-icon>
+        <mat-error *ngIf="form.get('phone').invalid"
+          >Please enter a valid phone number.</mat-error
+        >
+      </mat-form-field>
+      <div class="lable">Your Message*</div>
+      <mat-form-field appearance="outline">
+        <textarea
+          matInput
+          formControlName="message"
+          rows="5"
+          placeholder="Eg, Make yourself standout with custom message"
+        ></textarea>
+
+        <mat-error *ngIf="form.get('message').invalid"
+          >Please enter a message.</mat-error
+        >
+      </mat-form-field>
+      <div class="lable">Attach Resume*</div>
+      <button class="pdf-button" (click)="openFilePicker()">
+        Choose PDF <mat-icon>attach_file</mat-icon>
+      </button>
+      <input
+        type="file"
+        (change)="onFileSelected($event)"
+        accept=".pdf"
+        #fileInput
+        style="display: none"
+      />
+    </form>
+    <div class="divider"></div>
+    <div class="bottom">
+      <button mat-flat-button class="quote-button" type="submit">Submit</button>
+    </div>
+  </div>
+</div>
+<!-- </mat-dialog-content> -->

@@ -1,0 +1,78 @@
+<div class="main-container">
+  <div class="slider">
+    <div class="heading">Gaztron’s Ammonia Cracker</div>
+    <div class="divider"></div>
+    <app-nav-slider></app-nav-slider>
+    <p class="description">
+      We are India’s leading manufacturer and exporter of cutting-edge Ammonia
+      Cracking and Purification solutions. With our extensive product portfolio,
+      we offer a comprehensive selection of models to meet a diverse range of
+      needs. Our advanced designs deliver cracked Ammonia Gas with
+      industry-leading low dew points of up to (-80°), and flexible flow rates
+      ranging from 3Nm3/hr to 500Nm3/hr. Our team of skilled engineers ensures
+      that the cracked gas is consistently available at optimal pressures
+      between 1 kg/cm2 and 8 kg/cm2, enabling peak performance for your
+      operations.
+    </p>
+    <br />
+    <p class="description">
+      At Gaztron, we offer a versatile range of Ammonia Cracker Units, with flow
+      rates ranging from 3 Nm3/hr to 500 Nm3/hr and a dew point of (-80°). Our
+      units operate within a pressure range of 1 Kg/cm2 and 8 Kg/cm2, providing
+      optimal performance for a variety of industrial applications.
+    </p>
+    <br />
+    <p class="description">
+      Gaztron Ammonia Cracker is an essential component for a variety of
+      industrial processes, including reducing furnace environments, heat
+      treatment furnaces such as annealing, sintering, and galvanizing, as well
+      as the bright annealing of both carbon and stainless steel. Our
+      high-quality cracker units provide reliable and efficient performance to
+      meet the demands of these critical applications.
+    </p>
+  </div>
+  <div class="slider">
+    <app-application-template
+      [application]="applications"
+      [title]="'Gaztron’s Ammonia Cracker Applications'"
+      [description]="
+        'Our unwavering dedication to research and development has established us as frontrunners in ammonia cracker technologies, which find widespread applications in various industries worldwide. Our continuous focus on innovation has positioned us as industry leaders in meeting the demand for hydrogen or hydrogen-nitrogen mixtures in diverse industrial sectors such as:-'
+      "
+    >
+    </app-application-template>
+  </div>
+  <div class="slider">
+    <app-ammoniawork></app-ammoniawork>
+  </div>
+  <div class="slider">
+    <app-specialization
+      mainTitle="Gaztron’s Ammonia Cracker Models"
+      mainDescription="Discover the power of our advanced ammonia cracker, meticulously engineered to cater to the unique needs of our clients. Gaztron Ammonia Cracker plays a crucial role in diverse industrial processes. Our high-quality cracker units are designed to deliver reliable and efficient performance, ensuring they meet the exacting demands of these critical applications."
+      mainImage="assets/images/oxygen-generator.png"
+      [products]="models"
+    ></app-specialization>
+  </div>
+  <div class="slider">
+    <app-specification
+      title="Technical Specifications of Our Ammonia Cracker & Purifier Models"
+      description="Our innovative ammonia cracker offers a cost-effective solution for cracked ammonia gas production. With advanced engineering and efficient design, it delivers cracked ammonia gas at a significantly reduced cost compared to alternatives, optimizing your production process."
+      [tableContent]="tableContent"
+      [headings]="tableHeadings"
+      [backgroundColor]="'#F3F2F1'"
+    ></app-specification>
+  </div>
+
+  <div class="slider">
+    <app-generators
+      mainImage="assets/images/generator-logo.png"
+      mainTitle="What sets our PSA Nitrogen Generator apart from others"
+      [content]="generators"
+    ></app-generators>
+  </div>
+  <div class="slider">
+    <app-quote [options]="options"></app-quote>
+  </div>
+  <div class="slider">
+    <app-contactpage></app-contactpage>
+  </div>
+</div>

@@ -1,0 +1,53 @@
+<div class="container">
+  <mat-card>
+    <form (submit)="login(loginForm)" #loginForm="ngForm">
+      <img src="assets/images/Group 5.svg" alt="department-logo" class="logo" />
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input
+          matInput
+          name="email"
+          ngModel
+          type="email"
+          #emailInput="ngModel"
+          required
+          email
+        />
+        <mat-error *ngIf="emailInput.invalid"
+          >Please enter a valid email.</mat-error
+        >
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input
+          matInput
+          name="password"
+          ngModel
+          #passwordInput="ngModel"
+          required
+          [type]="hide ? 'password' : 'text'"
+        />
+        <button
+          mat-icon-button
+          matSuffix
+          (click)="hide = !hide"
+          [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide"
+        >
+          <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+        </button>
+        <mat-error *ngIf="passwordInput.invalid"
+          >Please enter a valid password.</mat-error
+        >
+      </mat-form-field>
+      <div class="bottom">
+        <!-- <mat-checkbox class="example-margin"> Remember Me</mat-checkbox> -->
+        <button mat-flat-button class="custom-button" type="submit">
+          Login
+        </button>
+      </div>
+    </form>
+    <!-- <a><p>Forgot Password?</p></a> -->
+  </mat-card>
+</div>

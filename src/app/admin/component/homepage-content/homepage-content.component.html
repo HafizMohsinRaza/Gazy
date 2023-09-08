@@ -1,0 +1,58 @@
+
+<div class="main-container">
+    <div class="header">
+      <div class="title">Home Page Contant</div>
+    </div>
+  
+      <table mat-table [dataSource]="dataSource" style="margin-bottom: 30px;" class="mat-elevation-z8">
+  
+        <ng-container matColumnDef="serial">
+          <th mat-header-cell *matHeaderCellDef style="width: 5%;">Sr. No.</th>
+          <td mat-cell *matCellDef="let index = index">{{ index + 1 }}</td>
+      </ng-container>
+        <ng-container matColumnDef="heading">
+          <th style="width: 10%;" mat-header-cell *matHeaderCellDef>Title</th>
+          <td mat-cell *matCellDef="let element">{{ element.heading }}</td>
+        </ng-container>
+        <ng-container matColumnDef="contant">
+          <th mat-header-cell *matHeaderCellDef>Contant</th>
+          <td style="  max-height: 3.5em;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: normal;
+          line-height: 1.75em;width: 24%; word-wrap: break-word;" mat-cell *matCellDef="let element">{{ element.contant }}</td>
+        </ng-container>
+        <ng-container matColumnDef="text1">
+            <th mat-header-cell *matHeaderCellDef>Text 1</th>
+            <td style="  max-height: 3.5em;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: normal;
+            line-height: 1.75em;width: 24%; word-wrap: break-word;" mat-cell *matCellDef="let element">{{ element.text1 }}</td>
+          </ng-container>
+          <ng-container matColumnDef="text2">
+            <th mat-header-cell *matHeaderCellDef>Text 2</th>
+            <td style="  max-height: 3.5em;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: normal;
+            line-height: 1.75em;width: 24%; word-wrap: break-word;" mat-cell *matCellDef="let element">{{ element.text2 }}</td>
+          </ng-container>
+        <ng-container matColumnDef="imagePath">
+          <th mat-header-cell *matHeaderCellDef>Image</th>
+          <td mat-cell style="width: 200px;" *matCellDef="let element"><img style="width: 90%; margin: 5px;" [src]="element.imagePath" alt=""></td>
+        </ng-container>
+        <ng-container matColumnDef="edit">
+          <th mat-header-cell *matHeaderCellDef>Edit</th>
+          <td mat-cell *matCellDef="let element">
+            <button class="edit">
+              <i [routerLink]="['../edit-contant', element._id]" class="fa-solid fa-pen-to-square"></i>
+            </button>
+          </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+      </table>
+  
+  </div>
+  

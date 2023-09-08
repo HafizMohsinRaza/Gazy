@@ -1,0 +1,20 @@
+<div class="main-container">
+  <img src="assets/images/key-product.png" alt="" />
+  <div class="title">Our Turn-Key Products</div>
+  <div class="description">
+    The demand for our Gas Generator Plants spans across different industries
+    across the world. Our continuous focus on research and development has
+    established us as industry leaders in the following domains:
+  </div>
+  <div class="products">
+    <div class="product" *ngFor="let product of products">
+        <img src="{{product.image}}" alt="" />
+        <div class="product-title">{{product.title}}</div>
+        <div class="row">
+            <button class="learn-more">Learn More</button>
+            <button class="quote">Request a quote</button>
+        </div>
+    </div>
+
+  </div>
+</div>

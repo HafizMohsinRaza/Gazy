@@ -1,0 +1,15 @@
+.list{
+    font-family: DM Sans;
+font-size: 16px;
+font-weight: 400;
+line-height: 21px;
+letter-spacing: 0.04em;
+text-align: left;
+color: #000000;
+    margin: 20px;
+
+  }
+  li{
+    margin-block-end: 10px;
+  }
+  

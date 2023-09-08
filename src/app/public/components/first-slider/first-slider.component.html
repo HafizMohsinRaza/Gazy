@@ -1,0 +1,57 @@
+<div class="main-container">
+    <div class="left-column">
+      <div class="image-container">
+        
+        <img
+          class="bottom-dots"
+          src="assets/images/white-dots.png"
+          alt="Overlay Image"
+        />
+        <img
+          class="main-image"
+          [src]="imgCollection[selectedSlide]?.imagePath"
+          alt="Main Image"
+        />
+        <div class="slider">
+          <app-slider  [imgCollection]="imgCollection" (slideChange)="selectedSlide = $event"></app-slider>
+      </div>
+        <img
+          class="top-dots"
+          src="assets/images/white-dots.png"
+          alt="Overlay Image"
+        />
+        <a class="right" href="#">
+          <mat-icon class="message">message</mat-icon>
+        </a>
+      </div>
+    </div>
+    <div class="right-column">
+      <div class="title">
+        Welcome to 👋🏻<br>
+Gaztron Engineering <br>
+Private Limited
+      </div>
+      <div class="certified">
+        (An ISO 9001-2015 Certified Co.)
+      </div>
+      <div class="description">
+        At Gaztron, We promise our customers the best design, production, and export services for PSA Nitrogen & Oxygen Gas Generator. We offer a variety of PSA Gas Generators to meet the needs of various applications while ensuring the highest purity.
+      </div>
+      <div class="row-2">
+        <button class="learn-more">Get in Touch</button>
+        <button class="quote">Request a quote</button>
+      </div>
+      <div class="social">
+        <a href="#">
+          <i class="whatsapp fa-brands fa-whatsapp"></i>
+        </a>
+        <a class="phone" href="#">
+          <img  src="assets/images/Vector.png" alt="">
+        </a>
+        <a class="left" href="#">
+          <mat-icon class="message">message</mat-icon>
+        </a>
+      </div>
+    </div>
+  </div>
+  

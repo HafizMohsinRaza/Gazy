@@ -1,0 +1,50 @@
+<div class="body">
+  <div class="inner">
+    <div class="inner-body">
+      <div class="image-container">
+        <img src="assets/images/10018.png" alt="About" class="img-responsive" />
+        <h3>Certifications & Standards</h3>
+        <p>
+          Our state-of-the-art manufacturing and office facility has achieved
+          prestigious international certifications, solidifying our commitment
+          to excellence and setting us apart from our competitors. We have
+          successfully met the stringent compliance requirements of these
+          certifications with flying colours, showcasing our unwavering
+          dedication to quality and compliance.
+        </p>
+        <div class="certificate">
+          <div class="certificate-item" *ngFor="let data of certificate">
+            <img src="{{ data.img }}" alt="About" class="certificate-image" />
+            <h4>{{ data.title }}</h4>
+          </div>
+        </div>
+        <p style="margin-top: 20px;">
+          These certifications not only validate our manufacturing and office
+          facility's excellence, but they also provide our customers with the
+          assurance that our products and services are of the highest quality,
+          meeting and exceeding international standards. Our commitment to
+          compliance and continuous improvement sets us apart from our
+          competitors, allowing us to deliver exceptional results and exceed our
+          customers' expectations.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="inner">
+    <div class="inner-body">
+      <app-key-products></app-key-products>
+    </div>
+  </div>
+
+  <div class="inner">
+    <div class="inner-body">
+      <app-quote [options]="options"></app-quote>
+    </div>
+  </div>
+
+  <div class="inner">
+    <div class="inner-body">
+      <app-contactpage> </app-contactpage>
+    </div>
+  </div>
+</div>

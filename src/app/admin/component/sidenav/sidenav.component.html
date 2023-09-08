@@ -1,0 +1,62 @@
+<div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed' : ''">
+  <div class="logo-container">
+    <button class="logo" (click)="toggleCollapsed()">A</button>
+    <div class="logo-text" *ngIf="collapsed">Admin</div>
+    <button
+      class="btn-close btn-close-white"
+      *ngIf="collapsed"
+      (click)="closesidenav()"
+    >
+      <!-- <i class="fa fa-times close-icon"></i> -->
+    </button>
+  </div>
+  <div class="scrollwrap scrollwrap_delayed">
+    <ul class="sidenav-nav">
+      <li class="sidenav-nav-item" *ngFor="let data of navItems">
+        <a
+          class="sidenav-nav-link"
+          *ngIf="data.items && data.items.length > 0"
+          (click)="handleClick(data)"
+        >
+          <i class="sidenav-link-icon" [class]="data.icon"></i>
+          <span class="sidenav-link-text" *ngIf="collapsed">{{
+            data.label
+          }}</span>
+          <i
+            class="menu-collapse-icon"
+            *ngIf="data.items && collapsed"
+            [ngClass]="
+              !data.expanded ? 'fa fa-angle-right' : 'fa fa-angle-down'
+            "
+          ></i>
+        </a>
+        <a
+          *ngIf="!data.items || (data.items && data.items.length === 0)"
+          class="sidenav-nav-link"
+          [routerLink]="data.routerlink"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: false }"
+        >
+          <i class="sidenav-link-icon" [class]="data.icon"></i>
+          <span class="sidenav-link-text" *ngIf="collapsed">{{
+            data.label
+          }}</span>
+        </a>
+        <div *ngIf="collapsed && data.items && data.items.length > 0">
+          <app-sublevel-menu
+          [collapsed]="collapsed"
+          [multiple]="multiple"
+          [expanded]="data.expanded"
+          [data]="data"
+          ></app-sublevel-menu>
+        </div>
+      </li>
+      <a href="" class="sidenav-nav-link" (click)="logout()">
+        <i class="sidenav-link-icon fa fa-sign-out"></i>
+        <span class="sidenav-link-text" *ngIf="collapsed">Logout</span>
+      </a>
+    </ul>
+  </div>
+  
+  
+</div>

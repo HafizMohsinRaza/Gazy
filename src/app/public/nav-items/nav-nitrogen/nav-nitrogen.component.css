@@ -1,0 +1,130 @@
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+  padding-top: 40px;
+}
+.slider {
+  background-color: white;
+  border: 2px solid #e7e6e4;
+  border-radius: 12px;
+  width: 90%;
+  box-shadow: 0px 4px 0px 0px #0E0D0C1F;
+  padding-bottom: 30px;
+}
+.chart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    border: 2px solid #e7e6e4;
+    border-radius: 12px;
+    width: 90%;
+    box-shadow: 0px 4px 0px 0px #0E0D0C1F;
+
+  }
+.inner-body{
+    background-color: white;
+    border: 2px solid #e7e6e4;
+    border-radius: 12px;
+    width: 95%;
+    box-shadow: 0px 4px 5px rgba(221, 221, 221, 0.1);
+    padding-bottom: 30px;
+}
+.divider {
+  height: 2px;
+  width: 100%;
+  background-color: #e7e6e4;
+}
+.heading {
+  font-family: DM Sans;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 31px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin: 20px 30px;
+}
+.description {
+  font-family: DM Sans;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-inline: 2.5%;
+  color: #000000;
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.payback {
+  font-family: Helvetica Neue;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0.04em;
+  text-align: left;
+}
+.saving-row {
+  display: flex;  
+}
+
+.saving{
+  border-radius: 5px 0 0 5px;
+}
+.consumption{
+  border-radius: 0 5px 5px 0;
+}
+.saving,
+.consumption {
+  font-family: Helvetica Neue;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
+  padding: 5px 10px;
+  color: #493ab1;
+  background-color: white;
+  border: 2px solid #493ab1;
+}
+.chart img{
+    height: 112px;
+    width: 112px;
+    margin-top: 30px;
+}
+.mainTitle{
+    font-family: DM Sans;
+font-size: 45px;
+font-weight: 700;
+line-height: 50px;
+letter-spacing: 0px;
+text-align: center;
+padding-top: 20px;
+padding-inline: 2.5%;
+
+}
+.chart-description{
+    font-family: DM Sans;
+font-size: 18px;
+font-weight: 400;
+line-height: 23px;
+letter-spacing: 0em;
+text-align: center;
+color: #99958F;
+    padding: 20px 2.5%;
+}
+button.active {
+  background-color: #493ab1;
+  color: white;
+}

@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+html, body { height: 100%; }
+body { margin: 0; font-family: 'DM Sans', sans-serif; background-color: #F9F8FE;
+}

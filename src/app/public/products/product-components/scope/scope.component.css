@@ -1,0 +1,27 @@
+.divider {
+    height: 2px;
+    width: 100%;
+    background-color: #e7e6e4;
+  }
+  .heading {
+    font-family: DM Sans;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 31px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin: 20px 30px;
+  }
+  li {
+    font-family: DM Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0.04em;
+    text-align: left;
+    color: #000000;
+    margin: 10px;
+  }
+  ul {
+    margin-block: 20px;
+  }

@@ -1,0 +1,236 @@
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+.sidenav {
+  background-color: #263238;
+  transition: all .5s ease;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  width: 5rem;
+  height: 100vh;
+  box-shadow: 0.063rem 0 1.25rem #8690a3;
+  overflow-y: auto; 
+  scrollbar-width: thin; 
+  scrollbar-color: #888888 #f0f0f0; 
+}
+.logo-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 15px 15px 0;
+  justify-content: space-between;
+  width: 100%;
+}
+.logo {
+  font-size: 24px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 900;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  width: 3rem;
+  min-width: 3rem;
+  background-color: #fff;
+}
+
+.logo-text {
+  margin-left: 1.5rem;
+  font-size: 24px;
+  font-weight: 700;
+  font-family: "DM Sans", sans-serif;
+  color: white;
+  overflow: visible;
+}
+.btn-close {
+  margin-left: auto;
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: transparent;
+  font-size: 22px;
+
+  animation: rotateAnimation 1s ease-in-out;
+}
+.close-icon {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+.sidenav-collapsed {
+  width: 16.562rem;
+}
+
+.sidenav-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  padding: 15px 15px 0;
+  margin: 0;
+}
+.sidenav-nav-item {
+  width: 100%;
+  margin-bottom: 15px;
+}
+.sidenav-nav-link {
+  display: flex;
+  align-items: center;
+  height: 3rem;
+  color: #f3f3f3;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: color 0.3s ease;
+  font-size: 22px;
+  padding: 8px;
+  gap: 25px;
+  /* margin-right: 10px; */
+  /* padding: 15px 15px 0; */
+}
+.sidenav-nav-icon {
+  width: 2rem;
+  min-width: 2rem;
+  background-color: #000;
+}
+.sidenav-nav-text {
+  margin-left: 1.5rem;
+  font-size: 20px;
+  font-family: "DM Sans", sans-serif;
+  color : white;
+}
+
+.sidenav-nav-item:hover {
+  .sidenav-nav-link,.menu-collapse-icon {
+    color: #37474f;
+    background-color: #f3f3f3;
+  }
+}
+.sidenav-nav-link:hover{
+  background-color: #fff;
+  color: black;
+}
+.menu-collapse-icon{
+  color:#000;
+}
+.active {
+  background-color: #fff;
+  color: #37474f;
+}
+
+.menu-collapse-icon{
+  font-size: 24px;
+  width: 2rem;
+  min-width: 2rem;
+  margin: auto 0.5rem auto auto;
+  text-align: center;
+  color: #f3f3f3;
+}
+
+.sublevel-nav{
+  list-style: none;
+  margin-left: 10px;
+  font-size: 16px;
+}
+/* .sublevel-nav-item{
+  
+} */
+
+.sublevel-nav-link{
+  display: flex;
+  align-items: center;
+  height: 3rem;
+  color: #898989;
+  text-decoration: none;
+  border-radius: 0.625rem;
+  transition: all .3s ease;
+  gap: 20px;
+  font-size: 22px;
+
+  
+}
+
+.sublevel-link-icon{
+  font-size: 4px;
+  width: 2rem;
+  min-width: 2rem;
+  margin: 0 0.5rem;
+  text-align: center;
+}
+
+.sublevel-link-text{
+  margin-left: 0.8rem;
+}
+
+.sublevel-nav-link:hover{
+  background-color: #fff;
+  color: #37474f;
+  padding: 10px;
+
+}
+
+/* .sidenav-link-icon,
+.sidenav-link-text {
+  color: #000;
+} */
+
+@keyframes rotateAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+.sidenav::-webkit-scrollbar {
+  width: 2px; 
+}
+
+.sidenav::-webkit-scrollbar-thumb {
+  background: #556268;
+  border-radius: 20px;
+}
+
+.sidenav::-webkit-scrollbar-thumb:hover {
+  background-color: #555555; 
+}
+
+.sidenav::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* .scrollwrap{
+  overflow-y: auto;
+  visibility: hidden;
+  height: calc(100% - 3.65rem);
+}
+
+.sidenav-nav,.scrollwrap :hover,.scrollwrap :focus{
+  visibility: visible;
+}
+.scrollwrap_delayed{
+  transition: visibility 0.5s 0.2s;
+}
+
+.scrollwrap_delayed:hover{
+  transition: visibility 0.2s 0.2s;
+}
+
+.scrollwrap::-webkit-scrollbar{
+  width: 10px;
+}
+
+.scrollwrap::-webkit-scrollbar-track{
+  background: transparent;
+}
+.scrollwrap::-webkit-scrollbar-thumb{
+  background: #556268;
+  border-radius: 20px;
+}
+
+.scrollwrap{
+  scrollbar-width: thin;
+  scrollbar-color: #556268 transparent;
+} */

@@ -1,0 +1,100 @@
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+.title{
+    font-family: DM Sans;
+font-size: 28px;
+font-weight: 700;
+line-height: 38px;
+letter-spacing: 0px;
+text-align: left;
+color: #000000;
+margin-block: 20px;
+}
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 2.5%;
+}
+.add-banner{
+    font-family: DM Sans;
+font-size: 18px;
+font-weight: 700;
+line-height: 38px;
+letter-spacing: 0px;
+text-align: left;
+border-radius: 5px;
+padding: 20px;
+margin-block: 20px;
+
+}
+.add-banner:hover{
+    background-color: #cecece;
+}
+.card{
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 95%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px;
+}
+.main-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.active{
+    background-color: #000000;
+    color: white;
+}
+
+::ng-deep .demo-table {
+  width: 100%;
+}
+
+::ng-deep .mat-mdc-row .mat-mdc-cell {
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid transparent;
+  cursor: pointer;
+}
+
+::ng-deep .mat-mdc-row:hover .mat-mdc-cell {
+  border-color: currentColor;
+}
+
+::ng-deep .demo-row-is-clicked {
+  font-weight: bold;
+}
+
+::ng-deep .mdc-data-table__table {
+  min-width: 95% !important;
+  width: 95% !important;
+}
+.edit,.delete{
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #333;
+}
+
+.delete:hover{
+  color: red;
+}
+.edit:hover{
+  color: blue;
+}
+
+td,th{
+    vertical-align: top;
+    padding-block: 10px;
+}
+td:nth-child(4), td:nth-child(5){
+    padding-top: 50px;
+}

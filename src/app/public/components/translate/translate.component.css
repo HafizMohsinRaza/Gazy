@@ -1,0 +1,22 @@
+::ng-deep .goog-te-combo,
+.VIpgJd-ZVi9od-ORHb *,
+.VIpgJd-ZVi9od-SmfZ *,
+.VIpgJd-ZVi9od-xl07Ob *,
+.VIpgJd-ZVi9od-vH1Gmf *,
+.VIpgJd-ZVi9od-l9xktf * {
+  font-family: arial;
+  font-size: 10pt;
+  height: 32px;
+  width: 180px;
+  border-radius: 8px;
+  background-color: white;
+  border: 1.5px solid #e7e6e4;
+  border: none;
+  font-family: DM Sans;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: left;
+  padding-inline: 10px;
+}

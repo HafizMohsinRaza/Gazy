@@ -1,0 +1,13 @@
+<div class="image-container">
+    <img src="assets/images/blogs2.png" alt="About" class="img-responsive" />
+    <h3>Explore More Blogs</h3>
+    <div class="project-images">
+        <div *ngFor="let data of blogs">
+          <div class="one-project" (click)="helpme(data.image,data.title)">
+              <img src="{{data.image}}" alt="project1" />
+              <div class="project-info">{{data.title}}</div>
+              
+          </div>
+        </div>
+      </div>
+  </div>  

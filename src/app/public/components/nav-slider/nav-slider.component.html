@@ -1,0 +1,34 @@
+<div class="main-container">
+  <div
+    id="carouselExampleIndicators"
+    style="width: 95%; padding-block: 2%"
+    class="carousel slide custom"
+    data-bs-ride="carousel"
+  >
+    <div class="carousel-indicators">
+      <button
+        type="button"
+        class="custom-button"
+        *ngFor="let imgUrl of imgCollection; let i = index"
+        [attr.data-bs-target]="'#carouselExampleIndicators'"
+        [attr.data-bs-slide-to]="i"
+        [class.active]="i === 0"
+        aria-current="true"
+        [attr.aria-label]="'Slide ' + (i + 1)"
+      ></button>
+    </div>
+
+    <div
+      class="carousel-inner"
+      style="border: 3px solid #354ed2; border-radius: 16px; box-shadow: 0px 4px 0px 0px #0E0D0C1F;"
+    >
+      <div
+        class="carousel-item"
+        *ngFor="let imgUrl of imgCollection; let i = index"
+        [class.active]="i === 0"
+      >
+        <img [src]="imgUrl.image" class="d-block" alt="Slide {{ i + 1 }}" />
+      </div>
+    </div>
+  </div>
+</div>

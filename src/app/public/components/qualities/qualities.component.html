@@ -1,0 +1,18 @@
+<div class="main-container">
+    <img src="assets/images/qualities-logo.png" alt="">
+    <div class="title">
+        What Makes Gaztron Gas Generator Different
+    </div>
+    <div class="description">
+        Since our inception, we have been dedicated to the production of on-site gas generators as our core business. With extensive experience in the industry, we have established ourselves as a leading provider of high-quality nitrogen and oxygen gas generators. Our continued focus on research and development has enabled us to offer the most energy-efficient technology available on the market today, which we take great pride in.
+    </div>
+    <div class="items-container">
+        <div class="item" *ngFor="let item of items">
+            <div class="img-container">
+                <img [src]="item.image" alt="">
+            </div>
+            <div class="item-title">{{ item.title }}</div>
+        </div>
+    </div>
+    <button class="custom-button">Learn More About Us</button>
+</div>

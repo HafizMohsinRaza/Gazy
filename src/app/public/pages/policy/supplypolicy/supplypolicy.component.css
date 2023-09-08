@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+
+.body {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.inner {
+  background-color: white;
+  width: 90%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1.5px solid #e7e6e4;
+}
+
+.img-responsive {
+  width: 112px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 112px;
+  margin-block: 30px;
+}
+.supplypolicy-title {
+  font-family: "DM Sans", sans-serif;
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 38px;
+  letter-spacing: 0px;
+  text-align: center;
+  padding-block: 20px;
+}
+.heading {
+  font-family: "DM Sans", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+.main-body{
+    margin: 20px;
+}
+.description {
+  font-family: "DM Sans", sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #99958f;
+  margin :10px 0;
+}
+ul {
+  font-family: "DM Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #99958f;
+  margin : 10px 10px
+}
+
+@media screen and (max-width: 800px) {
+  .body {
+    gap: 10px;
+  }
+  .description, ul{
+    font-size: 16px;
+    margin: 0px;
+  }
+}

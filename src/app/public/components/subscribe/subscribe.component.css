@@ -1,0 +1,190 @@
+.heading {
+  font-family: DM Sans;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 58px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #ffffff;
+}
+
+.custom {
+  height: 66px;
+  border-radius: 62px;
+  border: none;
+  background-color: #00b779;
+  color: white;
+  font-family: DM Sans;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 29px;
+  letter-spacing: 0.02em;
+
+  width: 200px;
+  margin-inline: 5px;
+}
+.custom-1 {
+  height: 66px;
+  border-radius: 62px;
+  border: none;
+  background-color: #00b779;
+  color: white;
+  font-family: DM Sans;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 29px;
+  letter-spacing: 0.02em;
+  display: none;
+  width: 200px;
+  margin-bottom: 20px;
+  margin-inline: 5px;
+}
+.containers {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #493ab1;
+  min-height: 270px;
+  overflow: hidden;
+  width: 100%;
+  border-radius: 12px;
+}
+
+.circle {
+  position: absolute;
+  width: 233px;
+  height: 233px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 3px solid #fff;
+}
+
+.circle-tl {
+  top: -80px;
+  left: -35px;
+}
+
+.circle-tr {
+  top: -80px;
+  right: -35px;
+}
+
+.circle-bl {
+  bottom: 60px;
+  left: -75px;
+}
+
+.circle-br {
+  bottom: 60px;
+  right: -75px;
+}
+
+.container > * {
+  box-sizing: border-box;
+}
+
+.containers
+  ::ng-deep
+  .mat-mdc-form-field-has-icon-suffix
+  .mat-mdc-text-field-wrapper {
+  padding-right: 0;
+  border-radius: 136px !important;
+}
+
+.containers
+  ::ng-deep
+  .mdc-text-field--outlined.mdc-text-field:not(.mdc-text-field--disabled)
+  .mdc-notched-outline__leading,
+.containers
+  ::ng-deep
+  .mdc-text-field--outlined.mdc-text-field:not(.mdc-text-field--disabled)
+  .mdc-notched-outline__trailing,
+.containers
+  ::ng-deep
+  .mdc-text-field--outlined.mdc-text-field:not(.mdc-text-field--disabled)
+  .mdc-notched-outline__notch,
+.containers
+  ::ng-deep
+  .mdc-text-field--outlined.mdc-text-field:not(.mdc-text-field--disabled):not(
+    .mdc-text-field--focused
+  ):hover
+  .mdc-notched-outline__leading,
+.containers
+  ::ng-deep
+  .mdc-text-field--outlined.mdc-text-field:not(.mdc-text-field--disabled):not(
+    .mdc-text-field--focused
+  ):hover
+  .mdc-notched-outline__notch,
+.containers
+  ::ng-deep
+  .mdc-text-field--outlined.mdc-text-field:not(.mdc-text-field--disabled):not(
+    .mdc-text-field--focused
+  ):hover
+  .mdc-notched-outline__trailing,
+.containers
+  ::ng-deep
+  .mdc-text-field--outlined.mdc-text-field:not(
+    .mdc-text-field--disabled
+  ).mdc-text-field--focused
+  .mdc-notched-outline__leading,
+.containers
+  ::ng-deep
+  .mdc-text-field--outlined.mdc-text-field:not(
+    .mdc-text-field--disabled
+  ).mdc-text-field--focused
+  .mdc-notched-outline__notch,
+.containers
+  ::ng-deep
+  .mdc-text-field--outlined.mdc-text-field:not(
+    .mdc-text-field--disabled
+  ).mdc-text-field--focused
+  .mdc-notched-outline__trailing {
+  border: none;
+}
+.containers
+  ::ng-deep
+  .mdc-text-field--no-label:not(.mdc-text-field--textarea)
+  .mat-mdc-form-field-input-control.mdc-text-field__input,
+.mat-mdc-text-field-wrapper .mat-mdc-form-field-input-control {
+  font-size: 20px;
+  margin-left: 20px;
+}
+.containers ::ng-deep .mdc-text-field {
+  background-color: white;
+}
+::ng-deep .mat-mdc-form-field {
+  width: 50%; border-radius: 62px;
+}
+
+@media (max-width: 868px) {
+
+  .circle {
+    display: none;
+  }
+  ::ng-deep .mat-mdc-form-field {
+    width: 90%;
+  }
+}
+
+@media (max-width: 700px) {
+
+  .circle {
+    display: none;
+  }
+  ::ng-deep .mat-mdc-form-field {
+    width: 90%;
+    margin-bottom: -10px;
+  }
+  .heading {
+    font-size: 30px;
+  }
+  .custom {
+    display: none;
+  } 
+  .custom-1{
+    display: block;
+  }
+}

@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+
+.body {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 40px;
+  padding-top: 2.5rem;
+}
+
+.inner {
+  background-color: white;
+  width: 90%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1.5px solid #e7e6e4;
+}
+
+.img-responsive {
+  width: 112px;
+  height: 112px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+.main-image {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-bottom: 20px;
+  border-radius: 12px;
+}
+
+h2 {
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-right: 20px;
+  font-weight: 600;
+  font-size: 22px;
+  font-family: "DM Sans", sans-serif;
+}
+
+h3 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  margin-top: 20px;
+  font-family: "DM Sans", sans-serif;
+}
+
+p {
+  font-size: 20px;
+  color: #272522;
+  font-family: "DM Sans", sans-serif;
+  margin-top: 20px;
+  letter-spacing: 4%;
+  line-height: 23.44px;
+}
+
+.expansion {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 20px;
+}
+.panel {
+  border: 1.5px solid #e7e6e4;
+}
+.title {
+  letter-spacing: 4%;
+  font-size: 20px;
+  font-weight: 550;
+  font-family: "DM Sans", sans-serif;
+  border-bottom: 2px solid #d9d9d9;
+  color: #272522;
+}
+
+ol,
+ul {
+  font-size: 20px;
+  color: #272522;
+  font-family: "DM Sans", sans-serif;
+  margin-top: 20px;
+  letter-spacing: 4%;
+  line-height: 23.44px;
+}
+ol li {
+  margin-bottom: 20px;
+}
+
+a {
+  cursor: pointer;
+  color: #272522;
+  font-family: "DM Sans", sans-serif;
+}
+
+.contact-button {
+  font-family: "DM Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+  color: white;
+  letter-spacing: 0px;
+  text-align: center;
+  width: 226px;
+  height: 48px;
+  top: 4656px;
+  left: 607px;
+  border-radius: 10px;
+  background: #354ed2;
+  border: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* media query */
+
+.scroll-button {
+  text-align: center;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 18px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.scroll-button:hover {
+  opacity: 1;
+}
+
+/* media query */
+
+@media screen and (max-width: 800px) {
+  .body {
+    gap: 10px;
+  }
+  .main-image {
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .title {
+    font-size: 16px;
+  }
+  ol,ul,li{
+    font-size: 14px;
+  }
+  .contact-button {
+    font-size: 15px;
+  }
+}
